@@ -1,0 +1,17 @@
+describe('Login webpage', function()  {
+    it('Home page login', function()
+    {
+     
+      cy.visit('http://54.238.106.146:5557/login')
+      cy.get('#email').type('atcadmin')
+      cy.get('#password').type('atcadmin2023')
+      cy.get('.MuiButton-contained').click()
+      cy.wait(3000);
+      cy.get('a[href="/workorder"]').click()
+      cy.wait(3000);
+      cy.get('a[href="/supervisortoolrequest"]').click()
+      cy.wait(3000);
+      cy.get('.css-1d0wu2u > .css-0').click()
+    })  
+
+})
